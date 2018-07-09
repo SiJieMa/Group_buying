@@ -46,6 +46,13 @@
                <span class="g_distribution_item"><span><img src="images/kinfe_icon.png"></span>赠送餐具</span>
             </div>
        </div>
+
+
+      <!-- 倒计时 -->
+      <div class="times_countDown">
+        <span>距离团购结束还有</span><br>
+        <span id="begintime" style="color:black;"></span>
+      </div>
     <!-- 商品详情介绍 -->
    <div class="goods_intro">
    	 <div class="goods_intro_tittle">
@@ -60,6 +67,14 @@
 
    <nav class="navbar navbar-default navbar-fixed-bottom">
   
+
+          
+          <div class="my_group">
+         <img src="images/group_icon.png"><br>
+          <span>我的拼团</span>
+         </div>
+
+
          <div class="single_buy">
          	<span>￥88</span><br>
          	<span>直接购买</span>
@@ -88,9 +103,26 @@
       },
     });
   </script>
-    <script src="js/sweetalert2.min.js"></script>
-    
-<script type="text/javascript">
+  <script type="text/javascript">
+    function getRTime(){ 
+      var EndTime= new Date('2019/09/23 22:00:00'); //截止时间 
+      var NowTime = new Date(); 
+      var t2016 =EndTime.getTime() - NowTime.getTime(); 
+      var d2016=Math.floor(t2016/1000/60/60/24); 
+      var h2016=Math.floor(t2016/1000/60/60%24); 
+      var m2016=Math.floor(t2016/1000/60%60); 
+      var s2016=Math.floor(t2016/1000%60); 
+        if(t2016>0){
+               document.getElementById("begintime").innerHTML = d2016 + "天"+h2016 + "时"+m2016 + "分"+s2016 + "秒"; 
+
+              }
+
+            }
+
+         setInterval(getRTime,1000); 
+  </script>
+  <script src="js/sweetalert2.min.js"></script>
+  <script type="text/javascript">
     	$('.go_group').on('click', function() {
           var name = "老爆三";
           var name2 = "大肠";
@@ -101,7 +133,7 @@
               +'<div class="box_img"><div class="user_group_image"><img class="sp_img" src="images/user1.jpg"><img class="sp_img" src="images/user2.jpg"><img class="sp_img" src="images/user2.jpg"></div></div>'
               ,
            showCloseButton:true,
-           confirmButtonColor: '#67b6ba',
+           confirmButtonColor: '#75cac3',
            confirmButtonText: '立即拼团', 
            }).then(function(){
                swal(
@@ -123,7 +155,7 @@
               '一起拼团 '
               +'<div class="box_img"><div class="user_group_image"><img class="sp_img" src="images/user1.jpg"><img class="sp_img" src="images/user2.jpg"><li class="group_users_per group_future_users"></li></div></div>',
            showCloseButton:true,
-           confirmButtonColor: '#67b6ba',
+           confirmButtonColor: '#75cac3',
            confirmButtonText: '立即拼团', 
            }).then(function(){
                swal(

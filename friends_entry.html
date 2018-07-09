@@ -60,6 +60,13 @@
      	<div class="group_user_tittle">
      		<span><span style="color: #67b6ba;">user.name</span>正在邀请你拼团，快来参团</span>
      	</div>
+      
+     <!-- 倒计时 -->
+      <div class="times_countDown">
+        <span>距离团购结束还有</span><br>
+        <span id="begintime" style="color:black;"></span>
+      </div>
+
 
         <div class="group_user_detial" >
           <div class="group_user_item">
@@ -68,7 +75,7 @@
            	   <div class="group_user_name">{会自爆的大肠杆菌}</div>
            	   <div class="group_user_info">
            	   	<span>还差<span style="color: #67b6ba;">{2人}</span>成团</span><br>
-           	     	<span class="time_countdown">还有<span color="red">{22:00:00}</span>结束</span>
+           	    <!--  	<span class="time_countdown">还有<span color="red">{22:00:00}</span>结束</span> -->
            	   </div>
 
                 <div class="go_group"  data-toggle="modal" data-target=".bs-example-modal-sm">
@@ -95,6 +102,13 @@
 
    <nav class="navbar navbar-default navbar-fixed-bottom">
            
+         
+          <div class="my_group">
+            <img src="images/group_icon.png"><br>
+             <span>我的拼团</span>
+         </div>
+        
+
         <div class="single_buy">
             <span>{￥88}</span><br>
           <span>直接购买</span>
@@ -105,6 +119,8 @@
             <span>{￥28}</span><br>
          	<span>加入拼团</span>
          </div>
+
+
     
    </nav>
 
@@ -116,7 +132,24 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
+<script type="text/javascript">
+    function getRTime(){ 
+      var EndTime= new Date('2019/09/23 22:00:00'); //截止时间 
+      var NowTime = new Date(); 
+      var t2016 =EndTime.getTime() - NowTime.getTime(); 
+      var d2016=Math.floor(t2016/1000/60/60/24); 
+      var h2016=Math.floor(t2016/1000/60/60%24); 
+      var m2016=Math.floor(t2016/1000/60%60); 
+      var s2016=Math.floor(t2016/1000%60); 
+        if(t2016>0){
+               document.getElementById("begintime").innerHTML =d2016 + "天"+h2016 + "时"+m2016 + "分"+s2016 + "秒"; 
+
+              }
+
+    }
+
+         setInterval(getRTime,1000); 
+  </script>
     <script src="js/sweetalert2.min.js"></script>
     
 <script type="text/javascript">
@@ -132,7 +165,7 @@
 
               ,
            showCloseButton:true,
-           confirmButtonColor: '#67b6ba',
+           confirmButtonColor: '#75cac3',
            confirmButtonText: '立即拼团', 
            }).then(function(){
                
@@ -142,7 +175,6 @@
                     'hello',
                     'success'
                	)
-
               
 
              })
@@ -164,7 +196,7 @@
 
               ,
            showCloseButton:true,
-           confirmButtonColor: '#67b6ba',
+           confirmButtonColor: ' #75cac3',
            confirmButtonText: '立即拼团', 
            }).then(function(){
                
@@ -188,33 +220,6 @@
        
 
     </script>
-
-    <style type="text/css">
-     .box_img{
-         width: 60%;
-         overflow: hidden;
-         margin: 0 auto;
-     }
-
-
-    	.sp_img{
-    		display:block;
-            width: .45rem;
-            margin-right: .1rem;
-            border-radius: 100%;
-            border: 1px solid #e0e0e0;
-            height: .45rem;
-            float: left;
-            position: relative;
-    	}
-    	.user_group_image{
-    		display: inline-block;
-    		overflow: hidden;
-    		padding: 0.2rem 0;
-    		margin-left: 0.1rem;
-
-    	}
-    </style>
   </body>
 </html>
 
