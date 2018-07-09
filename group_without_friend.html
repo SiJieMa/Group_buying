@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>第戎蛋糕团购</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/group_common.css">
+    <style type="text/css">
+    	body{background: #c6f8fb;}
+    </style>
+</head>
+<body>
+<div class="main">
+     <div class="wait_group_status  group_common_status">
+     	<div class="wait_group_status_content">
+
+     		<div class="goods_detail_block">
+     			<div class="goods_main_image">
+     				 <img src="images/banner.jpg">
+
+     				 <div class="goods_detail_bottom">
+     				 	<p class="goods_name">【第戎蛋糕】 红丝绒蛋糕舌尖上的欧洲</p>
+     				 	<span class="goods_sales_price">
+     				 		¥169
+     				 	</span>
+     				 </div>
+     			</div>
+     			
+
+                <span class="time_describe">
+                	团购结束时间：2018.07.20 15:00
+                </span>
+
+     		</div>
+
+                <div class="group_go_buy_btn2 rules">活动规则</div>
+
+     		<div class="rest_people_tittle">
+     			<p>距离拼团成功还差<span style="color: #83bfc0;">2</span>人</p>
+     		</div>
+
+            <div class="group_users_wrap">
+            	<ul class="group_users_list">
+                    <!--团长头像-->            		
+                    <li style="background:url(images/user1.jpg);background-size: 100% 100%;" class="group_users_per group_users_leader">
+            			<span class="group_users_leader_tag">团长</span>
+            		</li>
+            	   <!-- 空的用户头像-->
+                    <li class="group_users_per group_future_users">?</li>
+            		<!-- 空的用户头像-->
+            		<li class="group_users_per group_future_users">?</li>
+            	</ul>
+            </div>
+
+            <div class="group_go_buy_btn">邀请好友来拼团</div>
+        
+
+     	</div>
+      </div>
+</div>
+    
+ 
+
+ <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="js/sweetalert2.min.js"></script>
+    
+    <script type="text/javascript"> 
+    	
+
+         	$('.group_go_buy_btn').on('click', function() {
+		
+            swal({ 
+            text:"点击右上角分享给好友",
+            showCloseButton:true,
+            showConfirmButton:false,
+            background:"#72d6d6",
+            confirmButtonColor: '#67b6ba',
+             })
+           
+
+
+           });
+
+
+         	$('.group_go_buy_btn2').on('click', function() {
+			swal({ 
+              title: "漂亮！", 
+             text: "活动规则点阅",
+              background:"#72d6d6",
+             imageUrl: "images/thumbs-up.jpg" ,
+             showConfirmButton:false,
+             showCloseButton:true,
+                });
+			
+			});
+
+
+
+    </script>
+
+ 
+  </body>
+</html>
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>第戎蛋糕团购</title>
+   <!-- Bootstrap -->
+   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/sweetalert2.min.css">
+   <link rel="stylesheet" type="text/css" href="css/group_common.css">
+   <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<div class="main">
+    <div class="goods_container">
+<!--   bannner图-->       
+       <div class=" swiper-container goods_top_banner ">
+          
+          <div class="swiper-wrapper">
+             <div class="swiper-slide"> <img  src="images/banner.jpg"></div>
+          
+          </div>
+           <!-- 加入底部bannner导航 -->
+        <!--    <div class="swiper-pagination"></div> -->
+       </div>
+<!-- 团购详情·-->       
+       <div class="goods_info">
+            <div class="g_price">
+                <span class="g_group_price"><i>￥</i>1 </span><del class="g_origin_price">￥19</del>
+                <span class="g_group_num">已拼<span>7754个</span>,3人拼单</span>
+            </div>
+
+            <div class="g_name">
+                <span>[新人专享，限选一件]第戎朗朗姆巴巴蛋糕团购活动，3人成团</span>
+            </div>
+       </div>
+<!--  提供的服务 -->              
+       <div class="g_distribution">
+            <div class="g_distribution_list">
+               <span class="g_distribution_item"><span><img src="images/size_icon.png"></span>直径13cm</span>
+               <span class="g_distribution_item"><span><img src="images/people_icon.png"></span>适合5-8人食用</span>
+               <span class="g_distribution_item"><span><img src="images/transport_icon.png"></span>市内六区送货</span>
+               <span class="g_distribution_item"><span><img src="images/kinfe_icon.png"></span>赠送餐具</span>
+            </div>
+       </div>
+    <!-- 商品详情介绍 -->
+   <div class="goods_intro">
+   	 <div class="goods_intro_tittle">
+   	 	<p style="text-align: center;">商品详情</p>
+   	 	<img src="images/product1.jpg">
+   	 	<img src="images/product1.jpg">
+   	 	<img src="images/product1.jpg">
+   	 	<img src="images/product1.jpg">
+   	 </div>
+  </div>
+   <!-- 商品详情介绍结束 -->
+
+   <nav class="navbar navbar-default navbar-fixed-bottom">
+  
+         <div class="single_buy">
+         	<span>￥88</span><br>
+         	<span>直接购买</span>
+         </div>
+         <div class="begin_group">
+            <span>￥28</span><br>
+         	<span>发起拼团</span>
+         </div>
+    
+   </nav>
+   </div>
+</div>
+
+ <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+     <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+    });
+  </script>
+    <script src="js/sweetalert2.min.js"></script>
+    
+<script type="text/javascript">
+    	$('.go_group').on('click', function() {
+          var name = "老爆三";
+          var name2 = "大肠";
+          swal({ 
+          html:'与' 
+                + name+'和'+name2+
+              '一起拼团 '
+              +'<div class="box_img"><div class="user_group_image"><img class="sp_img" src="images/user1.jpg"><img class="sp_img" src="images/user2.jpg"><img class="sp_img" src="images/user2.jpg"></div></div>'
+              ,
+           showCloseButton:true,
+           confirmButtonColor: '#67b6ba',
+           confirmButtonText: '立即拼团', 
+           }).then(function(){
+               swal(
+                //在这里跳转到支付页面
+              // window.location = "http://www.baidu.com";
+                    'hello',
+                    'success'
+               	)
+             })
+			});
+
+
+          $('.see_more').on('click', function() {
+				
+          var name = "老爆三";
+          swal({ 
+           html:'与' 
+                + name+
+              '一起拼团 '
+              +'<div class="box_img"><div class="user_group_image"><img class="sp_img" src="images/user1.jpg"><img class="sp_img" src="images/user2.jpg"><li class="group_users_per group_future_users"></li></div></div>',
+           showCloseButton:true,
+           confirmButtonColor: '#67b6ba',
+           confirmButtonText: '立即拼团', 
+           }).then(function(){
+               swal(
+                       //在这里跳转到支付页面
+              // window.location = "http://www.baidu.com";
+                    'hello',
+                    'success'
+               	)
+             })
+			});
+
+
+
+    </script>
+
+
+   
+  </body>
+</html>
+
