@@ -50,8 +50,8 @@
 
       <!-- 倒计时 -->
       <div class="times_countDown">
-        <span>距离团购结束还有</span><br>
-        <span id="begintime" style="color:black;"></span>
+        <span style="color: #75cac3;font-size: 0.15rem;font-weight: bold;">距离团购结束还有</span><br>
+        <div id="begintime" style="color:#75cac3;"></div>
       </div>
     <!-- 商品详情介绍 -->
    <div class="goods_intro">
@@ -105,7 +105,7 @@
   </script>
   <script type="text/javascript">
     function getRTime(){ 
-      var EndTime= new Date('2019/09/23 22:00:00'); //截止时间 
+      var EndTime= new Date('2018/07/23 22:00:00'); //截止时间 
       var NowTime = new Date(); 
       var t2016 =EndTime.getTime() - NowTime.getTime(); 
       var d2016=Math.floor(t2016/1000/60/60/24); 
@@ -113,7 +113,7 @@
       var m2016=Math.floor(t2016/1000/60%60); 
       var s2016=Math.floor(t2016/1000%60); 
         if(t2016>0){
-               document.getElementById("begintime").innerHTML = d2016 + "天"+h2016 + "时"+m2016 + "分"+s2016 + "秒"; 
+               document.getElementById("begintime").innerHTML = "<span class='time_block'>"+d2016+"</span>" + "天"+ "<span class='time_block'>"+h2016+"</span>" + "时"+ "<span class='time_block'>"+m2016+"</span>"+ "分"+ "<span class='time_block'>"+s2016+"</span>" + "秒"; 
 
               }
 

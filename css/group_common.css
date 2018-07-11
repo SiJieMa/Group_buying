@@ -36,8 +36,6 @@
         }
 
 
-
-
         .goods_container{
             position: relative;
             width: 100%;
@@ -516,7 +514,6 @@
       text-align: center;
       font-size: 18px;
       background: #fff;
-
       /* Center slide text vertically */
       display: -webkit-box;
       display: -ms-flexbox;
@@ -531,3 +528,19 @@
       -webkit-align-items: center;
       align-items: center;
     }
+
+    .time_block{
+     background: #06beb6;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+     color: white;
+     display: inline-block;
+     width: 0.5rem;
+     margin: 0 0.05rem;
+     border-radius: 0.06rem;
+    }
+#begintime{
+  margin: 0.1rem 0;
+}
+
